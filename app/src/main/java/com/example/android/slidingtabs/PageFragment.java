@@ -1,7 +1,8 @@
 package com.example.android.slidingtabs;
 
-import android.app.Fragment;
+
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,6 +17,9 @@ public class PageFragment extends Fragment {
 
     private int mPage;
 
+    // This constructor adds information about each fragment through
+    // a bundle object using the ARG_PAGE dictionary index. This constructor
+    // allows to pass the page number when a new fragment is instantiated.
     public static PageFragment newInstance(int page) {
         Bundle args = new Bundle();
         args.putInt(ARG_PAGE, page);
@@ -25,6 +29,8 @@ public class PageFragment extends Fragment {
 
     }
 
+    // The onCreate method is overloaded to get the page number
+    // and saved on the mPage property.
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,12 +38,23 @@ public class PageFragment extends Fragment {
 
     }
 
+
+    // When the view is inflated the overloaded method creates a TextView with the Page Nuumber
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_page, container, false);
-        TextView textView = (TextView) view;
-        textView.setText("Fragment #" + mPage);
+
+        // Depending on the Tab use a different Adapter to create the section content
+
+        for(int i=1; i<6; i++) {
+
+            TextView textView = (TextView) view;
+            textView.setText("Fragment #" + mPage + " item #" + i);
+
+
+        }
+
         return view;
 
     }

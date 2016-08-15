@@ -9,8 +9,8 @@ import android.support.v4.app.FragmentPagerAdapter;
  * Created by Salvador on 13/08/2016.
  */
 public class SampleFragmentPagerAdapter extends FragmentPagerAdapter {
-    final int  PAGE_COUNT = 3;
-    private String tabTitles[] = new String[] {"Tab1", "Tab2", "Tab3"};
+    final int  PAGE_COUNT = 4;
+    private String tabTitles[] = new String[] {"Food", "Festivals", "Places","Biking routes"};
     private Context context;
 
     public SampleFragmentPagerAdapter(FragmentManager fm, Context context) {
