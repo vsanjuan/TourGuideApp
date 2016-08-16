@@ -2,8 +2,8 @@ package com.example.android.slidingtabs;
 
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,13 +47,10 @@ public class PageFragment extends Fragment {
 
         // Depending on the Tab use a different Adapter to create the section content
 
-        for(int i=1; i<6; i++) {
 
-            TextView textView = (TextView) view;
-            textView.setText("Fragment #" + mPage + " item #" + i);
+        TextView textView = (TextView) view;
+        textView.setText("Fragment #" + mPage );
 
-
-        }
 
         return view;
 

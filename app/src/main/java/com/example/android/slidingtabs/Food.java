@@ -7,7 +7,7 @@ public class Food extends TourItem {
 
     String mRecipe;
 
-    public  Food (String title, int icon, String recipe) {
+    public  Food (int title, int icon, String recipe) {
 
         super(title, icon);
         mRecipe = recipe;

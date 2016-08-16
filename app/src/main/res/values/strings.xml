@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">SlidingTabs</string>
     <string name="title_activity_maps">Map</string>
+    <string name="title_activity_festival">FestivalActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="fallas" translatable="false">Fallas</string>
+    <string name="semana_santa_title" translatable="false">Semana Santa</string>
+    <string name="feria_julio_title" translatable="false">Feria de Julio</string>
+    <string name="muixeranga_title" translatable="false">Muixeranga</string>
 </resources>

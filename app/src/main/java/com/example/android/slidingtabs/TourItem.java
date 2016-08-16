@@ -7,19 +7,19 @@ import com.google.android.gms.maps.model.LatLng;
  */
 public class TourItem   {
 
-    private String mTitle;
-    private String mDescription;
+    private int mTitle;  // Use int because the text will be a string resource in strings.xml
+    private int mDescription; // Use int because the text will be a string resource in strings.xml
     private int mIcon;
     private int mPicture;
     private LatLng mLocation;  // Additional information
 
-    public TourItem (String title,  int icon) {
+    public TourItem (int title,  int icon) {
 
         mTitle = title;
         mIcon = icon;
     }
 
-    public TourItem(String title, String description, int icon, int picture) {
+    public TourItem(int title, int description, int icon, int picture) {
 
         mTitle = title;
         mIcon = icon;
@@ -27,7 +27,7 @@ public class TourItem   {
         mPicture = picture;
     }
 
-    public TourItem (String title, String description, int icon, int picture, LatLng location) {
+    public TourItem (int title, int description, int icon, int picture, LatLng location) {
 
         mTitle = title;
         mIcon = icon;
@@ -36,7 +36,7 @@ public class TourItem   {
         mLocation = location;
     }
 
-    public String getmTitle() {
+    public int getmTitle() {
         return mTitle;
     }
 
@@ -44,7 +44,7 @@ public class TourItem   {
         return mIcon;
     }
 
-    public String getmDescription() {
+    public int getmDescription() {
         return mDescription;
     }
 

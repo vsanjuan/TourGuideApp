@@ -1,10 +1,11 @@
 package com.example.android.slidingtabs;
 
-import android.support.v4.app.Fragment;
+import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -14,8 +15,8 @@ import java.util.ArrayList;
  */
 public class FestivalAdapter extends ArrayAdapter<Festival> {
 
-    public FestivalAdapter(Fragment context, ArrayList<Festival> Festivals) {
-        super (context,0, Festivals);
+    public FestivalAdapter(Activity context, ArrayList<Festival> Festivals) {
+        super (context ,0 , Festivals);
     }
 
     @Override
@@ -31,10 +32,12 @@ public class FestivalAdapter extends ArrayAdapter<Festival> {
         // Get the {@link AndroidFlavor} object located at this position in the list
         Festival currentFestival = getItem(position);
 
-        TextView titleTextView = new TextView(getContext());
+        TextView titleTextView = listView.findViewById(R.id.title_tour_item);
         titleTextView.setText(currentFestival.getmTitle());
-        listView.add
 
-        return super.getView(position, convertView, parent);
+        ImageView iconImageView = listView.findViewById(R.id.icon_tour_item);
+
+
+        return listView;
     }
 }

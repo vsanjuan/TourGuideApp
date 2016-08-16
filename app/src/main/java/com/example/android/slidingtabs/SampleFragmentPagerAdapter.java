@@ -25,6 +25,11 @@ public class SampleFragmentPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
+
+        if (position == 1 ) {
+            return FestivalActivityFragment.newInstance(position+1);
+        }
+
         return  PageFragment.newInstance(position+1);
     }
 
