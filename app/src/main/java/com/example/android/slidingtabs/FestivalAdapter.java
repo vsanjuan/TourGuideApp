@@ -1,6 +1,6 @@
 package com.example.android.slidingtabs;
 
-import android.content.Context;
+import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +15,7 @@ import java.util.ArrayList;
  */
 public class FestivalAdapter extends ArrayAdapter<Festival> {
 
-    public FestivalAdapter(Context context, ArrayList<Festival> Festivals) {
+    public FestivalAdapter(Activity context, ArrayList<Festival> Festivals) {
         super (context ,0 , Festivals);
     }
 
@@ -26,17 +26,16 @@ public class FestivalAdapter extends ArrayAdapter<Festival> {
 
         if(listView == null) {
             listView = LayoutInflater.from(getContext()).inflate(
-                    R.layout.festival_list, parent, false);
+                    R.layout.fragment_page, parent, false);
         }
 
         // Get the {@link AndroidFlavor} object located at this position in the list
         Festival currentFestival = getItem(position);
 
-        TextView titleTextView = (TextView) listView.findViewById(R.id.title_tour_item);
-        titleTextView.setText(currentFestival.getmTitle()); // How to translate the id to text
+        TextView titleTextView = listView.findViewById(R.id.title_tour_item);
+        titleTextView.setText(currentFestival.getmTitle());
 
-        ImageView iconImageView = (ImageView) listView.findViewById(R.id.icon_tour_item);
-        iconImageView.setImageResource(currentFestival.getmIcon());
+        ImageView iconImageView = listView.findViewById(R.id.icon_tour_item);
 
 
         return listView;
