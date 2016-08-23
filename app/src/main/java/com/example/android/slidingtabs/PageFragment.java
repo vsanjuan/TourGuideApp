@@ -47,7 +47,6 @@ public class PageFragment extends Fragment {
 
         // Depending on the Tab use a different Adapter to create the section content
 
-
         TextView textView = (TextView) view;
         textView.setText("Fragment #" + mPage );
 
