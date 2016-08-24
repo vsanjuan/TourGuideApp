@@ -39,6 +39,7 @@ public class FestivalAdapter extends ArrayAdapter<Festival> {
         iconImageView.setImageResource(currentFestival.getmIcon());
 
 
+
         return listView;
     }
 }

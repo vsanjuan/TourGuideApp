@@ -1,5 +1,6 @@
 package com.example.android.slidingtabs;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -68,7 +69,8 @@ public class FestivalActivityFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-
+                Intent intent = new Intent(getActivity(), FestivalDetail.class);
+                intent.putExtra("Festival",festivals.get(i));
 
             }
 
