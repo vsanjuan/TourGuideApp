@@ -1,13 +1,15 @@
 package com.example.android.slidingtabs;
 
 import android.content.Intent;
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -54,23 +56,41 @@ public class FestivalActivityFragment extends Fragment {
         // Creates the Festivals Array and populates it
         final ArrayList<Festival> festivals = new ArrayList<>();
 
-        festivals.add(new Festival(R.string.fallas ,R.mipmap.iconofallas));
-        festivals.add(new Festival (R.string.muixeranga_title, R.mipmap.muixerangaicon));
-        festivals.add(new Festival(R.string.feria_julio_title,R.mipmap.feriadejulioicon));
-        festivals.add(new Festival(R.string.semana_santa_title,R.mipmap.semanasanta));
+        festivals.add(new Festival(R.string.fallas,R.string.fallas_description,R.mipmap.iconofallas,R.mipmap.fallafoto));
+        festivals.add(new Festival (R.string.muixeranga_title,R.string.muixeranga_description, R.mipmap.muixerangaicon,R.mipmap.muixeranga));
+        festivals.add(new Festival(R.string.feria_julio_title,R.string.feria_julio_description,R.mipmap.feriadejulioicon,R.mipmap.feriadejulio));
+        festivals.add(new Festival(R.string.semana_santa_title, R.string.semana_santa_description,R.mipmap.semanasanta,R.mipmap.semanasanta));
 
-        FestivalAdapter adapter = new FestivalAdapter(getActivity(),festivals);
+        final FestivalAdapter adapter = new FestivalAdapter(getActivity(),festivals);
 
         final ListView listView = (ListView) rootView.findViewById(R.id.festival_list_view);
 
         listView.setAdapter(adapter);
 
+        listView.setClickable(true);
+
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
+                //TourItem festival = (Festival) adapterView.getAdapter().getItem(i);
+                Festival festival = (Festival) festivals.get(i);
+
+                Toast.makeText(getContext(),festival.getmTitle(),Toast.LENGTH_LONG);
+
+                Log.v("FestivalXX",getResources().getString(festival.getmTitle()));
+                Log.v("FestivalXX",getResources().getString(festival.getmDescription()));
+                Log.v("FestivalXX",getResources().getString(festival.getmPicture()));
+
                 Intent intent = new Intent(getActivity(), FestivalDetail.class);
-                intent.putExtra("Festival",festivals.get(i));
+
+                intent.putExtra("Foto", festival.getmPicture());
+                intent.putExtra("Title", festival.getmTitle());
+                intent.putExtra("Description", festival.getmDescription());
+
+                //intent.putExtra("Festival",festival);
+                startActivity(intent);
+
 
             }
 

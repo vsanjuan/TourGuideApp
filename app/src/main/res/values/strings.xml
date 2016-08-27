@@ -7,4 +7,11 @@
     <string name="semana_santa_title" translatable="false">Semana Santa</string>
     <string name="feria_julio_title" translatable="false">Feria de Julio</string>
     <string name="muixeranga_title" translatable="false">Muixeranga</string>
+    <string name="semana_santa_description">Festival to celebrate Jesus  death and resurrection. Each event starting from the
+dinner with the apostles to the death and burial is represented by a monument.
+There\'s a religious association that fund the maintenance of the monument and
+follows it during the week carrying in on the members shoulders. </string>
+    <string name="muixeranga_description">Muixeranga is a human tower that follows the Virgin Mary in the festival that takes place in Algemesí.</string>
+    <string name="fallas_description">Fallas are association of people usually belonging to the same neighourhood who meet all year round to build a monument made from woord and paper once a year that is burned at the end of the celebration.</string>
+    <string name="feria_julio_description">To prevent people from living the city in summer and to attract visitors Valencia town halll started in 1871 a summer festival.</string>
 </resources>

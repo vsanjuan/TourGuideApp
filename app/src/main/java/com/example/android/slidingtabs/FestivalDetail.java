@@ -2,6 +2,7 @@ package com.example.android.slidingtabs;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -14,16 +15,37 @@ public class FestivalDetail extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_festival_detail);
 
-        Festival mSelectedFestival = (Festival) this.getIntent().getSerializableExtra(FESTIVAL);
+        Bundle extras = getIntent().getExtras();
+
+        Log.v("FestivalDetail", getResources().getString(extras.getInt("Title")));
+        Log.v("FestivalDetail",Integer.toString(extras.getInt("Foto")) );
+
+        // TourItem mSelectedFestival = (TourItem) this.getIntent().getSerializableExtra(FESTIVAL);
 
         ImageView imageView = (ImageView) findViewById(R.id.festival_detail_picture);
-        imageView.setImageResource(mSelectedFestival.getmPicture());
-
         TextView textViewTitle = (TextView) findViewById(R.id.festival_detail_title);
-        textViewTitle.setText(mSelectedFestival.getmTitle());
-
         TextView textViewDescription = (TextView) findViewById(R.id.festival_detail_description);
-        textViewDescription.setText(mSelectedFestival.getmDescription());
+
+        imageView.setImageResource(extras.getInt("Foto",R.mipmap.fallafoto));
+        textViewTitle.setText(getResources().getString(extras.getInt("Title")));
+        textViewDescription.setText(getResources().getString(extras.getInt("Description")));
+        //textViewDescription.setText("Hola");
+
+
+
+  /*      if (mSelectedFestival == null) {
+
+            imageView.setImageResource(extras.getInt("Image",R.mipmap.fallafoto));
+            textViewTitle.setText(extras.getString("Title"));
+            textViewDescription.setText(extras.getString("Description"));
+
+        } else {
+
+            imageView.setImageResource(mSelectedFestival.getmPicture());
+            textViewTitle.setText(mSelectedFestival.getmTitle());
+            textViewDescription.setText(mSelectedFestival.getmDescription());
+
+        }*/
 
     }
 }

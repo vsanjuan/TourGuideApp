@@ -89,15 +89,4 @@ public class TourItem implements Parcelable {
         this.mLocation = in.readParcelable(LatLng.class.getClassLoader());
     }
 
-    public static final Parcelable.Creator<TourItem> CREATOR = new Parcelable.Creator<TourItem>() {
-        @Override
-        public TourItem createFromParcel(Parcel source) {
-            return new TourItem(source);
-        }
-
-        @Override
-        public TourItem[] newArray(int size) {
-            return new TourItem[size];
-        }
-    };
 }
