@@ -26,7 +26,7 @@ public class FestivalDetail extends AppCompatActivity {
         TextView textViewTitle = (TextView) findViewById(R.id.festival_detail_title);
         TextView textViewDescription = (TextView) findViewById(R.id.festival_detail_description);
 
-        imageView.setImageResource(extras.getInt("Foto",R.mipmap.fallafoto));
+        imageView.setImageResource(extras.getInt("Foto",R.mipmap.fotofallas));
         textViewTitle.setText(getResources().getString(extras.getInt("Title")));
         textViewDescription.setText(getResources().getString(extras.getInt("Description")));
         //textViewDescription.setText("Hola");

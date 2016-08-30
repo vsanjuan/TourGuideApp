@@ -56,10 +56,10 @@ public class FestivalActivityFragment extends Fragment {
         // Creates the Festivals Array and populates it
         final ArrayList<Festival> festivals = new ArrayList<>();
 
-        festivals.add(new Festival(R.string.fallas,R.string.fallas_description,R.mipmap.iconofallas,R.mipmap.fallafoto));
-        festivals.add(new Festival (R.string.muixeranga_title,R.string.muixeranga_description, R.mipmap.muixerangaicon,R.mipmap.muixeranga));
-        festivals.add(new Festival(R.string.feria_julio_title,R.string.feria_julio_description,R.mipmap.feriadejulioicon,R.mipmap.feriadejulio));
-        festivals.add(new Festival(R.string.semana_santa_title, R.string.semana_santa_description,R.mipmap.semanasanta,R.mipmap.semanasanta));
+        festivals.add(new Festival(R.string.fallas,R.string.fallas_description,R.mipmap.iconofallas,R.drawable.fotofallas));
+        festivals.add(new Festival (R.string.muixeranga_title,R.string.muixeranga_description, R.mipmap.iconoprocesion,R.drawable.fotoprocesion));
+        festivals.add(new Festival(R.string.feria_julio_title,R.string.feria_julio_description,R.mipmap.iconoferiadejulio,R.drawable.fotoferiadejulio));
+        festivals.add(new Festival(R.string.semana_santa_title, R.string.semana_santa_description,R.mipmap.iconosemanasanta,R.drawable.fotosemanasanta));
 
         final FestivalAdapter adapter = new FestivalAdapter(getActivity(),festivals);
 
