@@ -8,12 +8,12 @@ import android.support.v4.app.FragmentPagerAdapter;
 /**
  * Created by Salvador on 13/08/2016.
  */
-public class SampleFragmentPagerAdapter extends FragmentPagerAdapter {
+public class TourFragmentPagerAdapter extends FragmentPagerAdapter {
     final int  PAGE_COUNT = 4;
     private String tabTitles[] = new String[] {"Food", "Festivals", "Places","Biking routes"};
     private Context context;
 
-    public SampleFragmentPagerAdapter(FragmentManager fm, Context context) {
+    public TourFragmentPagerAdapter(FragmentManager fm, Context context) {
         super(fm);
         this.context = context;
     }
