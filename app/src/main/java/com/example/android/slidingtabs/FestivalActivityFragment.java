@@ -48,10 +48,10 @@ public class FestivalActivityFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        // return inflater.inflate(R.layout.fragment_festival, container, false);
+        // return inflater.inflate(R.layout.fragment_tour, container, false);
 
         //Inflates the main view that contains all the child elements
-        View rootView = inflater.inflate(R.layout.fragment_festival, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_tour, container, false);
 
         // Creates the Festivals Array and populates it
         final ArrayList<Festival> festivals = new ArrayList<>();

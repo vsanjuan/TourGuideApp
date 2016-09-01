@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SlidingTabs</string>
+    <string name="app_name">TourGuideApp</string>
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_festival">FestivalActivity</string>
     <string name="action_settings">Settings</string>
