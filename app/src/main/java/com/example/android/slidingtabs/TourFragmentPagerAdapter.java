@@ -34,6 +34,10 @@ public class TourFragmentPagerAdapter extends FragmentPagerAdapter {
             return FestivalActivityFragment.newInstance(position+1);
         }
 
+        if (position == 2 ) {
+            return PlaceActivityFragment.newInstance(position+1);
+        }
+
         return  PageFragment.newInstance(position+1);
     }
 

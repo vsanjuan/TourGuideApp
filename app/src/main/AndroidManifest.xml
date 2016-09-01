@@ -45,8 +45,13 @@
             android:name=".FoodActivity"
             android:label="@string/title_activity_festival"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PlaceActivity"
+            android:label="@string/title_activity_festival"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".FestivalDetail"></activity>
         <activity android:name=".FoodDetail"></activity>
+        <activity android:name=".PlaceDetail"></activity>
     </application>
 
 </manifest>
