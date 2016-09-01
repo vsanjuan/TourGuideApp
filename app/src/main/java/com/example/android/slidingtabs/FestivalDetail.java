@@ -13,7 +13,7 @@ public class FestivalDetail extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_festival_detail);
+        setContentView(R.layout.activity_tour_item_detail);
 
         Bundle extras = getIntent().getExtras();
 
@@ -22,9 +22,9 @@ public class FestivalDetail extends AppCompatActivity {
 
         // TourItem mSelectedFestival = (TourItem) this.getIntent().getSerializableExtra(FESTIVAL);
 
-        ImageView imageView = (ImageView) findViewById(R.id.festival_detail_picture);
-        TextView textViewTitle = (TextView) findViewById(R.id.festival_detail_title);
-        TextView textViewDescription = (TextView) findViewById(R.id.festival_detail_description);
+        ImageView imageView = (ImageView) findViewById(R.id.tour_item_detail_picture);
+        TextView textViewTitle = (TextView) findViewById(R.id.tour_item_detail_title);
+        TextView textViewDescription = (TextView) findViewById(R.id.tour_item_detail_description);
 
         imageView.setImageResource(extras.getInt("Foto",R.mipmap.fotofallas));
         textViewTitle.setText(getResources().getString(extras.getInt("Title")));

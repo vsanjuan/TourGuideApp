@@ -26,7 +26,7 @@ public class FestivalAdapter extends ArrayAdapter<Festival> {
 
         if(listView == null) {
             listView = LayoutInflater.from(getContext()).inflate(
-                    R.layout.festival_list, parent, false);
+                    R.layout.tour_list_items, parent, false);
         }
 
         // Get the {@link AndroidFlavor} object located at this position in the list
