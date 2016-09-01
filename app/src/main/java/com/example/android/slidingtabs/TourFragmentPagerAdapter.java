@@ -26,6 +26,10 @@ public class TourFragmentPagerAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
 
+        if (position == 0 ) {
+            return FoodActivityFragment.newInstance(position+1);
+        }
+
         if (position == 1 ) {
             return FestivalActivityFragment.newInstance(position+1);
         }

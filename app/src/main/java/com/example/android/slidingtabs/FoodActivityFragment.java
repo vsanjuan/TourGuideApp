@@ -16,7 +16,7 @@ import java.util.ArrayList;
 /**
  * A placeholder fragment containing a simple view.
  */
-public class FestivalActivityFragment extends Fragment {
+public class FoodActivityFragment extends Fragment {
 
     public  static  final   String  ARG_PAGE = "ARG_PAGE";
 
@@ -25,10 +25,10 @@ public class FestivalActivityFragment extends Fragment {
     // This constructor adds information about each fragment through
     // a bundle object using the ARG_PAGE dictionary index. This constructor
     // allows to pass the page number when a new fragment is instantiated.
-    public static FestivalActivityFragment newInstance(int page) {
+    public static FoodActivityFragment newInstance(int page) {
         Bundle args = new Bundle();
         args.putInt(ARG_PAGE, page);
-        FestivalActivityFragment fragment = new FestivalActivityFragment();
+        FoodActivityFragment fragment = new FoodActivityFragment();
         fragment.setArguments(args);
         return fragment;
 
@@ -54,14 +54,14 @@ public class FestivalActivityFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_tour, container, false);
 
         // Creates the Festivals Array and populates it
-        final ArrayList<Festival> festivals = new ArrayList<>();
+        final ArrayList<Food> foods = new ArrayList<>();
 
-        festivals.add(new Festival(R.string.fallas,R.string.fallas_description,R.mipmap.iconofallas,R.drawable.fotofallas));
-        festivals.add(new Festival (R.string.muixeranga_title,R.string.muixeranga_description, R.mipmap.iconoprocesion,R.drawable.fotoprocesion));
-        festivals.add(new Festival(R.string.feria_julio_title,R.string.feria_julio_description,R.mipmap.iconoferiadejulio,R.drawable.fotoferiadejulio));
-        festivals.add(new Festival(R.string.semana_santa_title, R.string.semana_santa_description,R.mipmap.iconosemanasanta,R.drawable.fotosemanasanta));
+        foods.add(new Food(R.string.allipebre_title,R.string.allipebre_description,R.mipmap.iconoallipebre,R.drawable.fotoallipebre));
+        foods.add(new Food (R.string.paella_title,R.string.paella_description, R.mipmap.iconopaella,R.drawable.fotopaella));
+        foods.add(new Food(R.string.orange_juice_title,R.string.orange_juice_description,R.mipmap.iconozumo,R.drawable.fotozumonaranja));
+        foods.add(new Food(R.string.orxata_title, R.string.orxata_description,R.mipmap.iconoorxata,R.drawable.fotohorchata));
 
-        final FestivalAdapter adapter = new FestivalAdapter(getActivity(),festivals);
+        final FoodAdapter adapter = new FoodAdapter(getActivity(),foods);
 
         final ListView listView = (ListView) rootView.findViewById(R.id.tour_category_list_view);
 
@@ -73,22 +73,22 @@ public class FestivalActivityFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-                //TourItem festival = (Festival) adapterView.getAdapter().getItem(i);
-                Festival festival = (Festival) festivals.get(i);
+                //TourItem festival = (Food) adapterView.getAdapter().getItem(i);
+                Food festival = (Food) foods.get(i);
 
                 Toast.makeText(getContext(),festival.getmTitle(),Toast.LENGTH_LONG);
 
-                Log.v("FestivalXX",getResources().getString(festival.getmTitle()));
-                Log.v("FestivalXX",getResources().getString(festival.getmDescription()));
-                Log.v("FestivalXX",getResources().getString(festival.getmPicture()));
+                Log.v("FoodXX",getResources().getString(festival.getmTitle()));
+                Log.v("FoodXX",getResources().getString(festival.getmDescription()));
+                Log.v("FoodXX",getResources().getString(festival.getmPicture()));
 
-                Intent intent = new Intent(getActivity(), FestivalDetail.class);
+                Intent intent = new Intent(getActivity(), FoodDetail.class);
 
                 intent.putExtra("Foto", festival.getmPicture());
                 intent.putExtra("Title", festival.getmTitle());
                 intent.putExtra("Description", festival.getmDescription());
 
-                //intent.putExtra("Festival",festival);
+                //intent.putExtra("Food",festival);
                 startActivity(intent);
 
 

@@ -14,5 +14,10 @@ public class Food extends TourItem {
 
     }
 
+    public Food ( int title,  int description, int icon, int picture) {
+        super(title, description, icon, picture);
+
+    }
+
 
 }
