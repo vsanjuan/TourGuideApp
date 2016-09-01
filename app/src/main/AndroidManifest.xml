@@ -43,15 +43,20 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".FoodActivity"
-            android:label="@string/title_activity_festival"
+            android:label="@string/title_activity_food"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".PlaceActivity"
+            android:label="@string/title_activity_place"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".BikeRouteActivity"
             android:label="@string/title_activity_festival"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".FestivalDetail"></activity>
         <activity android:name=".FoodDetail"></activity>
         <activity android:name=".PlaceDetail"></activity>
+        <activity android:name=".BikeRouteDetail"></activity>
     </application>
 
 </manifest>

@@ -38,7 +38,11 @@ public class TourFragmentPagerAdapter extends FragmentPagerAdapter {
             return PlaceActivityFragment.newInstance(position+1);
         }
 
-        return  PageFragment.newInstance(position+1);
+        if (position == 3 ) {
+            return BikeRouteActivityFragment.newInstance(position+1);
+        }
+
+        return  BikeRouteActivityFragment.newInstance(position+1);
     }
 
     @Override
