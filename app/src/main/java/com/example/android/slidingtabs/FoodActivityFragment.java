@@ -48,7 +48,6 @@ public class FoodActivityFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        // return inflater.inflate(R.layout.fragment_tour, container, false);
 
         //Inflates the main view that contains all the child elements
         View rootView = inflater.inflate(R.layout.fragment_tour, container, false);
@@ -56,10 +55,10 @@ public class FoodActivityFragment extends Fragment {
         // Creates the Festivals Array and populates it
         final ArrayList<Food> foods = new ArrayList<>();
 
-        foods.add(new Food(R.string.allipebre_title,R.string.allipebre_description,R.mipmap.iconoallipebre,R.drawable.fotoallipebre));
-        foods.add(new Food (R.string.paella_title,R.string.paella_description, R.mipmap.iconopaella,R.drawable.fotopaella));
-        foods.add(new Food(R.string.orange_juice_title,R.string.orange_juice_description,R.mipmap.iconozumo,R.drawable.fotozumonaranja));
-        foods.add(new Food(R.string.orxata_title, R.string.orxata_description,R.mipmap.iconoorxata,R.drawable.fotohorchata));
+        foods.add(new Food(R.string.allipebre_title,R.string.allipebre_description,R.drawable.iconoallipebre,R.drawable.fotoallipebre));
+        foods.add(new Food (R.string.paella_title,R.string.paella_description, R.drawable.iconopaella,R.drawable.fotopaella));
+        foods.add(new Food(R.string.orange_juice_title,R.string.orange_juice_description,R.drawable.iconozumo,R.drawable.fotozumonaranja));
+        foods.add(new Food(R.string.orxata_title, R.string.orxata_description,R.drawable.iconoorxata,R.drawable.fotohorchata));
 
         final FoodAdapter adapter = new FoodAdapter(getActivity(),foods);
 
@@ -73,7 +72,6 @@ public class FoodActivityFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-                //TourItem festival = (Food) adapterView.getAdapter().getItem(i);
                 Food festival = (Food) foods.get(i);
 
                 Toast.makeText(getContext(),festival.getmTitle(),Toast.LENGTH_LONG);
@@ -88,7 +86,6 @@ public class FoodActivityFragment extends Fragment {
                 intent.putExtra("Title", festival.getmTitle());
                 intent.putExtra("Description", festival.getmDescription());
 
-                //intent.putExtra("Food",festival);
                 startActivity(intent);
 
 

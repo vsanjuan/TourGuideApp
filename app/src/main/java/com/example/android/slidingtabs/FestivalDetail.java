@@ -29,23 +29,7 @@ public class FestivalDetail extends AppCompatActivity {
         imageView.setImageResource(extras.getInt("Foto",R.mipmap.fotofallas));
         textViewTitle.setText(getResources().getString(extras.getInt("Title")));
         textViewDescription.setText(getResources().getString(extras.getInt("Description")));
-        //textViewDescription.setText("Hola");
 
-
-
-  /*      if (mSelectedFestival == null) {
-
-            imageView.setImageResource(extras.getInt("Image",R.mipmap.fallafoto));
-            textViewTitle.setText(extras.getString("Title"));
-            textViewDescription.setText(extras.getString("Description"));
-
-        } else {
-
-            imageView.setImageResource(mSelectedFestival.getmPicture());
-            textViewTitle.setText(mSelectedFestival.getmTitle());
-            textViewDescription.setText(mSelectedFestival.getmDescription());
-
-        }*/
 
     }
 }

@@ -48,7 +48,6 @@ public class PlaceActivityFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        // return inflater.inflate(R.layout.fragment_tour, container, false);
 
         //Inflates the main view that contains all the child elements
         View rootView = inflater.inflate(R.layout.fragment_tour, container, false);
@@ -56,10 +55,10 @@ public class PlaceActivityFragment extends Fragment {
         // Creates the Festivals Array and populates it
         final ArrayList<Place> places = new ArrayList<>();
 
-        places.add(new Place(R.string.torres_serrano_title,R.string.torres_serrano_description,R.mipmap.iconotorresdeserrano,R.drawable.fototorresdeserrano));
-        places.add(new Place (R.string.micalet_title,R.string.micalet_description, R.mipmap.iconomicalet,R.drawable.fotomicalet));
-        places.add(new Place(R.string.ciudad_ciencias_title,R.string.ciudad_ciencias_description,R.mipmap.iconociudadartesyciencias,R.drawable.fotociudadartesyciencias));
-        places.add(new Place(R.string.catedral_title, R.string.cathedral_description,R.mipmap.iconocatedraldevalencia,R.drawable.fotocatedral));
+        places.add(new Place(R.string.torres_serrano_title,R.string.torres_serrano_description,R.drawable.iconotorresdeserrano,R.drawable.fototorresdeserrano));
+        places.add(new Place (R.string.micalet_title,R.string.micalet_description, R.drawable.iconomicalet,R.drawable.fotomicalet));
+        places.add(new Place(R.string.ciudad_ciencias_title,R.string.ciudad_ciencias_description,R.drawable.iconociudadartesyciencias,R.drawable.fotociudadartesyciencias));
+        places.add(new Place(R.string.catedral_title, R.string.cathedral_description,R.drawable.iconocatedraldevalencia,R.drawable.fotocatedral));
 
         final PlaceAdapter adapter = new PlaceAdapter(getActivity(),places);
 
@@ -73,7 +72,6 @@ public class PlaceActivityFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-                //TourItem festival = (Place) adapterView.getAdapter().getItem(i);
                 Place festival = (Place) places.get(i);
 
                 Toast.makeText(getContext(),festival.getmTitle(),Toast.LENGTH_LONG);
@@ -88,9 +86,7 @@ public class PlaceActivityFragment extends Fragment {
                 intent.putExtra("Title", festival.getmTitle());
                 intent.putExtra("Description", festival.getmDescription());
 
-                //intent.putExtra("Place",festival);
                 startActivity(intent);
-
 
             }
 

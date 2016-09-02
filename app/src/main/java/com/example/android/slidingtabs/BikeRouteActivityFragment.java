@@ -56,10 +56,10 @@ public class BikeRouteActivityFragment extends Fragment {
         // Creates the BikeRoutes Array and populates it
         final ArrayList<BikeRoute> bikeroutes = new ArrayList<>();
 
-        bikeroutes.add(new BikeRoute(R.string.bike_barx_title,R.string.bike_barx_description,R.mipmap.iconorutabarx,R.drawable.fotorutabarx));
-        bikeroutes.add(new BikeRoute (R.string.bike_benirrama_title,R.string.bike_benirrama_description, R.mipmap.iconorutacilistabenirrama,R.drawable.fotorutaciclistabenirrama));
-        bikeroutes.add(new BikeRoute(R.string.bike_enguera_title,R.string.bike_enguera_description,R.mipmap.iconorutaciclistaenguera,R.drawable.fotorutaciclistaenguera));
-        bikeroutes.add(new BikeRoute(R.string.bike_turis_title, R.string.bike_turis_description,R.mipmap.iconorutaciclistaturis,R.drawable.fotorutaturis));
+        bikeroutes.add(new BikeRoute(R.string.bike_barx_title,R.string.bike_barx_description,R.drawable.iconorutabarx,R.drawable.fotorutabarx));
+        bikeroutes.add(new BikeRoute (R.string.bike_benirrama_title,R.string.bike_benirrama_description, R.drawable.iconorutacilistabenirrama,R.drawable.fotorutaciclistabenirrama));
+        bikeroutes.add(new BikeRoute(R.string.bike_enguera_title,R.string.bike_enguera_description,R.drawable.iconorutaciclistaenguera,R.drawable.fotorutaciclistaenguera));
+        bikeroutes.add(new BikeRoute(R.string.bike_turis_title, R.string.bike_turis_description,R.drawable.iconorutaciclistaturis,R.drawable.fotorutaturis));
 
         final BikeRouteAdapter adapter = new BikeRouteAdapter(getActivity(),bikeroutes);
 
@@ -73,7 +73,6 @@ public class BikeRouteActivityFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-                //TourItem bikeroute = (BikeRoute) adapterView.getAdapter().getItem(i);
                 BikeRoute bikeroute = (BikeRoute) bikeroutes.get(i);
 
                 Toast.makeText(getContext(),bikeroute.getmTitle(),Toast.LENGTH_LONG);
@@ -88,7 +87,6 @@ public class BikeRouteActivityFragment extends Fragment {
                 intent.putExtra("Title", bikeroute.getmTitle());
                 intent.putExtra("Description", bikeroute.getmDescription());
 
-                //intent.putExtra("BikeRoute",bikeroute);
                 startActivity(intent);
 
 

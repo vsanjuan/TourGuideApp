@@ -47,8 +47,7 @@ public class FestivalActivityFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-        // return inflater.inflate(R.layout.fragment_tour, container, false);
+        
 
         //Inflates the main view that contains all the child elements
         View rootView = inflater.inflate(R.layout.fragment_tour, container, false);
@@ -56,10 +55,10 @@ public class FestivalActivityFragment extends Fragment {
         // Creates the Festivals Array and populates it
         final ArrayList<Festival> festivals = new ArrayList<>();
 
-        festivals.add(new Festival(R.string.fallas,R.string.fallas_description,R.mipmap.iconofallas,R.drawable.fotofallas));
-        festivals.add(new Festival (R.string.muixeranga_title,R.string.muixeranga_description, R.mipmap.iconoprocesion,R.drawable.fotoprocesion));
-        festivals.add(new Festival(R.string.feria_julio_title,R.string.feria_julio_description,R.mipmap.iconoferiadejulio,R.drawable.fotoferiadejulio));
-        festivals.add(new Festival(R.string.semana_santa_title, R.string.semana_santa_description,R.mipmap.iconosemanasanta,R.drawable.fotosemanasanta));
+        festivals.add(new Festival(R.string.fallas,R.string.fallas_description,R.drawable.iconofallas,R.drawable.fotofallas));
+        festivals.add(new Festival (R.string.muixeranga_title,R.string.muixeranga_description, R.drawable.iconoprocesion,R.drawable.fotoprocesion));
+        festivals.add(new Festival(R.string.feria_julio_title,R.string.feria_julio_description,R.drawable.iconoferiadejulio,R.drawable.fotoferiadejulio));
+        festivals.add(new Festival(R.string.semana_santa_title, R.string.semana_santa_description,R.drawable.iconosemanasanta,R.drawable.fotosemanasanta));
 
         final FestivalAdapter adapter = new FestivalAdapter(getActivity(),festivals);
 
@@ -72,8 +71,7 @@ public class FestivalActivityFragment extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
-                //TourItem festival = (Festival) adapterView.getAdapter().getItem(i);
+                
                 Festival festival = (Festival) festivals.get(i);
 
                 Toast.makeText(getContext(),festival.getmTitle(),Toast.LENGTH_LONG);
@@ -87,10 +85,8 @@ public class FestivalActivityFragment extends Fragment {
                 intent.putExtra("Foto", festival.getmPicture());
                 intent.putExtra("Title", festival.getmTitle());
                 intent.putExtra("Description", festival.getmDescription());
-
-                //intent.putExtra("Festival",festival);
+                
                 startActivity(intent);
-
 
             }
 

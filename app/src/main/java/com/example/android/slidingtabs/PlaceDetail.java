@@ -20,8 +20,6 @@ public class PlaceDetail extends AppCompatActivity {
         Log.v("PlaceDetail", getResources().getString(extras.getInt("Title")));
         Log.v("PlaceDetail",Integer.toString(extras.getInt("Foto")) );
 
-        // TourItem mSelectedPlace = (TourItem) this.getIntent().getSerializableExtra(PLACE);
-
         ImageView imageView = (ImageView) findViewById(R.id.tour_item_detail_picture);
         TextView textViewTitle = (TextView) findViewById(R.id.tour_item_detail_title);
         TextView textViewDescription = (TextView) findViewById(R.id.tour_item_detail_description);
@@ -29,23 +27,7 @@ public class PlaceDetail extends AppCompatActivity {
         imageView.setImageResource(extras.getInt("Foto",R.mipmap.fotofallas));
         textViewTitle.setText(getResources().getString(extras.getInt("Title")));
         textViewDescription.setText(getResources().getString(extras.getInt("Description")));
-        //textViewDescription.setText("Hola");
 
-
-
-  /*      if (mSelectedPlace == null) {
-
-            imageView.setImageResource(extras.getInt("Image",R.mipmap.fallafoto));
-            textViewTitle.setText(extras.getString("Title"));
-            textViewDescription.setText(extras.getString("Description"));
-
-        } else {
-
-            imageView.setImageResource(mSelectedPlace.getmPicture());
-            textViewTitle.setText(mSelectedPlace.getmTitle());
-            textViewDescription.setText(mSelectedPlace.getmDescription());
-
-        }*/
 
     }
 }
