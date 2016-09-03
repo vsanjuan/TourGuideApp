@@ -75,11 +75,6 @@ public class BikeRouteActivityFragment extends Fragment {
 
                 BikeRoute bikeroute = (BikeRoute) bikeroutes.get(i);
 
-                Toast.makeText(getContext(),bikeroute.getmTitle(),Toast.LENGTH_LONG);
-
-                Log.v("BikeRouteXX",getResources().getString(bikeroute.getmTitle()));
-                Log.v("BikeRouteXX",getResources().getString(bikeroute.getmDescription()));
-                Log.v("BikeRouteXX",getResources().getString(bikeroute.getmPicture()));
 
                 Intent intent = new Intent(getActivity(), BikeRouteDetail.class);
 

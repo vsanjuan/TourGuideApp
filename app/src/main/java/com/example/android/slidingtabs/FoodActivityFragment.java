@@ -74,12 +74,6 @@ public class FoodActivityFragment extends Fragment {
 
                 Food festival = (Food) foods.get(i);
 
-                Toast.makeText(getContext(),festival.getmTitle(),Toast.LENGTH_LONG);
-
-                Log.v("FoodXX",getResources().getString(festival.getmTitle()));
-                Log.v("FoodXX",getResources().getString(festival.getmDescription()));
-                Log.v("FoodXX",getResources().getString(festival.getmPicture()));
-
                 Intent intent = new Intent(getActivity(), FoodDetail.class);
 
                 intent.putExtra("Foto", festival.getmPicture());
