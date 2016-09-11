@@ -3,13 +3,11 @@ package com.example.android.slidingtabs;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -76,9 +74,9 @@ public class FestivalActivityFragment extends Fragment {
 
                 Intent intent = new Intent(getActivity(), FestivalDetail.class);
 
-                intent.putExtra("Foto", festival.getmPicture());
-                intent.putExtra("Title", festival.getmTitle());
-                intent.putExtra("Description", festival.getmDescription());
+                intent.putExtra(getString(R.string.foto), festival.getmPicture());
+                intent.putExtra(getString(R.string.title), festival.getmTitle());
+                intent.putExtra(getString(R.string.description), festival.getmDescription());
                 
                 startActivity(intent);
 

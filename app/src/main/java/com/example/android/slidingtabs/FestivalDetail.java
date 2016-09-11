@@ -7,7 +7,6 @@ import android.widget.TextView;
 
 public class FestivalDetail extends AppCompatActivity {
 
-    private static final String FESTIVAL = "Festival";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,9 +19,9 @@ public class FestivalDetail extends AppCompatActivity {
         TextView textViewTitle = (TextView) findViewById(R.id.tour_item_detail_title);
         TextView textViewDescription = (TextView) findViewById(R.id.tour_item_detail_description);
 
-        imageView.setImageResource(extras.getInt("Foto"));
-        textViewTitle.setText(getResources().getString(extras.getInt("Title")));
-        textViewDescription.setText(getResources().getString(extras.getInt("Description")));
+        imageView.setImageResource(extras.getInt(getString(R.string.foto)));
+        textViewTitle.setText(getResources().getString(extras.getInt(getString(R.string.title))));
+        textViewDescription.setText(getResources().getString(extras.getInt(getString(R.string.description))));
 
 
     }

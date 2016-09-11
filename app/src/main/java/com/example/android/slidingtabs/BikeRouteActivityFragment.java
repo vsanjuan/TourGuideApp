@@ -3,13 +3,11 @@ package com.example.android.slidingtabs;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -78,9 +76,9 @@ public class BikeRouteActivityFragment extends Fragment {
 
                 Intent intent = new Intent(getActivity(), BikeRouteDetail.class);
 
-                intent.putExtra("Foto", bikeroute.getmPicture());
-                intent.putExtra("Title", bikeroute.getmTitle());
-                intent.putExtra("Description", bikeroute.getmDescription());
+                intent.putExtra(getString(R.string.foto), bikeroute.getmPicture());
+                intent.putExtra(getString(R.string.title), bikeroute.getmTitle());
+                intent.putExtra(getString(R.string.description), bikeroute.getmDescription());
 
                 startActivity(intent);
 

@@ -75,9 +75,9 @@ public class PlaceActivityFragment extends Fragment {
 
                 Intent intent = new Intent(getActivity(), PlaceDetail.class);
 
-                intent.putExtra("Foto", festival.getmPicture());
-                intent.putExtra("Title", festival.getmTitle());
-                intent.putExtra("Description", festival.getmDescription());
+                intent.putExtra(getString(R.string.foto), festival.getmPicture());
+                intent.putExtra(getString(R.string.title), festival.getmTitle());
+                intent.putExtra(getString(R.string.description), festival.getmDescription());
 
                 startActivity(intent);
 
